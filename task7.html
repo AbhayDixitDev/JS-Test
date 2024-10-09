@@ -8,9 +8,11 @@
 <body>
   <!-- make a program to take 15 numbers from user and find the maximum number and print it in display -->
    <h1 id="out">Check in Console</h1>
+   <button onclick="maxNum()">Click me to find the maximum number</button>
 
 
    <script>
+   function maxNum(){
     let numbers = [];
 for (let i = 0; i < 15; i++) {
   let num = parseFloat(prompt(`Enter number ${i+1}: `));
@@ -19,10 +21,7 @@ for (let i = 0; i < 15; i++) {
 
 // Find the maximum number
 let maxNum = Math.max(...numbers);
-
-// Print the maximum number
-document.write("Array is: "+numbers+"<br>");
-document.getElementById("out").innerHTML = `The maximum number is: ${maxNum}`;
+   }
    </script>
 
 </body>
