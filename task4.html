@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter a Number to reverse it: ><input type="number" name="" id="number1" placeholder="enter a numbner to reverse">
+   <input type="number" name="" id="rev" placeholder="output will be shown here">
+    <button onclick="reversenum()">Reverse Number</button>
+
+
+    <script>
+        function reversenum(){
+            let number1=document.getElementById("number1").value;
+            let rev=document.getElementById("rev").value;
+            rev="";
+            for (let i = number1.length-1; i >=0 ; i--) {
+                rev+=number1[i];
+                // console.log(rev)
+             
+                
+            }
+            document.getElementById("rev").value=rev;
+            
+           
+        }
+    </script>
+
+</body>
+</html>

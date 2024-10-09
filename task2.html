@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        Enter Physics marks: <input type="text" id="phy" placeholder="Physics Marks" maxlength="2"> <br><br>
+        Enter Chemistry Marks:<input type="text" id="che" placeholder="Chemistry Marks" maxlength="2"><br><br>
+        Enter Math Marks:<input type="text" id="maths" placeholder="Math Marks" maxlength="2"><br><br>
+        Enter English Marks:<input type="text" id="eng" placeholder="English Marks" maxlength="2"><br><br>
+        <button id="Calculate">Calculate Totals Marks and Percentage</button>
+  
+
+    <div id="result">
+        <h1 id="Total">Total Marks: 400</h1>
+        <h1 id="marks">Obtained Marks</h1>
+        <h1 id="Percentage">Percentage</h1>
+
+    </div>
+
+    <script>
+        document.getElementById("Calculate").addEventListener("click",Calculate);
+
+        function Calculate(){
+          let phy=Number(document.getElementById("phy").value);
+          let che=Number(document.getElementById("che").value);
+          let maths=Number(document.getElementById("maths").value);
+          let eng=Number(document.getElementById("eng").value);
+
+          let marks=(phy+che+maths+eng);
+          document.getElementById("marks").innerHTML="Obtained Marks:"+marks;
+          let Percentage=(marks/400)*100;
+          console.log(Percentage);
+          document.getElementById("Percentage").innerHTML=Percentage;
+
+        }
+    </script>
+</body>
+</html>

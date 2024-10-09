@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">May the code be with you</h1>
+    <button onclick="changeStyle()">Change Style of Text</button>
+
+    <script>
+        function changeStyle(){
+            let item= document.getElementById("demo");
+            item.innerHTML="You can also change css of elements using JS, thats what js is cool"
+            item.style.color="Red"
+            item.style.fontSize="48px"
+            item.style.fontFamily="arial"
+            document.querySelector("body").style.backgroundColor="black";
+        }
+    </script>
+</body>
+</html>

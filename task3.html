@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Number to find its table:<input type="number" id="number"> 
+    <button id="table">Table Print</button>
+    <h1 id="tableprint">Table Will Be Shown Here</h1>
+
+    <script>
+        document.getElementById("table").addEventListener("click",Table)
+
+        function Table(){
+            let number1=Number(document.getElementById("number").value);
+            console.log(number1);
+
+            let tableprint=document.getElementById("tableprint").innerHTML;
+
+
+            for (let i = 1; i <11 ; i++) {
+                value1=number1*i
+               document.getElementById("tableprint").innerHTML+="<br>"+value1;
+            }
+        }
+    </script>
+</body>
+</html>
